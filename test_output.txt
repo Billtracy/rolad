@@ -1,0 +1,486 @@
+"""
+<!DOCTYPE html>\n
+<html lang="en">\n
+\n
+<head>\n
+    <meta charset="utf-8">\n
+    <meta name="viewport" content="width=device-width, initial-scale=1">\n
+    <meta name="csrf-token" content="N2BN26humMX2sT1afDVDduwnohzt4X7SLX444q3F">\n
+\n
+    <title>Welcome to ROLAD Properties</title>\n
+    <meta name="description"\n
+        content="ROLAD Properties offers premium real estate solutions in Nigeria. Buy land, earn with agriculture, and build your dream home.">\n
+\n
+    <!-- Open Graph / Facebook -->\n
+    <meta property="og:type" content="website">\n
+    <meta property="og:url" content="http://localhost">\n
+    <meta property="og:title" content="Welcome to ROLAD Properties">\n
+    <meta property="og:description"\n
+        content="ROLAD Properties offers premium real estate solutions in Nigeria. Buy land, earn with agriculture, and build your dream home.">\n
+    <meta property="og:image" content="http://localhost/images/og-image.jpg">\n
+\n
+    <!-- Twitter -->\n
+    <meta property="twitter:card" content="summary_large_image">\n
+    <meta property="twitter:url" content="http://localhost">\n
+    <meta property="twitter:title" content="Welcome to ROLAD Properties">\n
+    <meta property="twitter:description"\n
+        content="ROLAD Properties offers premium real estate solutions in Nigeria. Buy land, earn with agriculture, and build your dream home.">\n
+    <meta property="twitter:image" content="http://localhost/images/og-image.jpg">\n
+\n
+    <!-- Fonts -->\n
+    <link rel="preconnect" href="https://fonts.googleapis.com">\n
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n
+    <link\n
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"\n
+        rel="stylesheet">\n
+\n
+    <!-- Styles / Scripts -->\n
+            <link rel="preload" as="style" href="http://localhost/build/assets/app-DUHdGxgW.css" /><link rel="modulepreload" as="script" href="http://localhost/build/assets/app-CKl8NZMC.js" /><link rel="stylesheet" href="http://localhost/build/assets/app-DUHdGxgW.css" /><script type="module" src="http://localhost/build/assets/app-CKl8NZMC.js"></script>    \n
+    <!-- Alpine.js -->\n
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>\n
+</head>\n
+\n
+<body class="font-sans text-dark antialiased bg-accent selection:bg-secondary selection:text-white"\n
+    x-data="{ mobileMenuOpen: false }">\n
+\n
+    <!-- Navigation -->\n
+    <header class="fixed w-full z-50 transition-all duration-300"\n
+        :class="{ 'bg-white/90 backdrop-blur-md shadow-md py-2': $window.scrollY > 10, 'bg-transparent py-4': $window.scrollY <= 10 }"\n
+        @scroll.window="scrolled = (window.pageYOffset > 20)">\n
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">\n
+            <div class="flex justify-between items-center">\n
+                <!-- Logo -->\n
+                <div class="flex-shrink-0 flex items-center">\n
+                    <a href="http://localhost" class="font-heading text-2xl font-bold text-primary">\n
+                        ROLAD<span class="text-secondary">Properties</span>\n
+                    </a>\n
+                </div>\n
+\n
+                <!-- Desktop Menu -->\n
+                <nav class="hidden md:flex space-x-8">\n
+                    <a href="http://localhost" class="text-dark hover:text-primary font-medium transition">Home</a>\n
+                    <a href="http://localhost/properties"\n
+                        class="text-dark hover:text-primary font-medium transition">Properties</a>\n
+                    <a href="http://localhost/about" class="text-dark hover:text-primary font-medium transition">About\n
+                        Us</a>\n
+                    <a href="http://localhost/blog"\n
+                        class="text-dark hover:text-primary font-medium transition">Blog</a>\n
+                    <a href="http://localhost/contact"\n
+                        class="text-dark hover:text-primary font-medium transition">Contact</a>\n
+                </nav>\n
+\n
+                <!-- CTA & Auth -->\n
+                <div class="hidden md:flex items-center space-x-4">\n
+                    <a href="http://localhost/login" class="text-primary hover:text-primary-light font-medium">Login</a>\n
+                    <a href="http://localhost/register" class="btn-primary">Get Started</a>\n
+                </div>\n
+\n
+                <!-- Mobile Menu Button -->\n
+                <div class="-mr-2 flex items-center md:hidden">\n
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" type="button"\n
+                        class="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-primary-light focus:outline-none">\n
+                        <span class="sr-only">Open main menu</span>\n
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">\n
+                            <path :class="{'hidden': mobileMenuOpen, 'inline-flex': !mobileMenuOpen }"\n
+                                class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"\n
+                                d="M4 6h16M4 12h16M4 18h16" />\n
+                            <path :class="{'hidden': !mobileMenuOpen, 'inline-flex': mobileMenuOpen }" class="hidden"\n
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"\n
+                                d="M6 18L18 6M6 6l12 12" />\n
+                        </svg>\n
+                    </button>\n
+                </div>\n
+            </div>\n
+        </div>\n
+\n
+        <!-- Mobile Menu -->\n
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white shadow-lg absolute w-full">\n
+            <div class="pt-2 pb-3 space-y-1 px-4">\n
+                <a href="http://localhost"\n
+                    class="block px-3 py-2 text-base font-medium text-primary bg-accent rounded-md">Home</a>\n
+                <a href="http://localhost/properties"\n
+                    class="block px-3 py-2 text-base font-medium text-dark hover:text-primary hover:bg-gray-50 rounded-md">Properties</a>\n
+                <a href="http://localhost/about"\n
+                    class="block px-3 py-2 text-base font-medium text-dark hover:text-primary hover:bg-gray-50 rounded-md">About\n
+                    Us</a>\n
+                <a href="http://localhost/blog"\n
+                    class="block px-3 py-2 text-base font-medium text-dark hover:text-primary hover:bg-gray-50 rounded-md">Blog</a>\n
+                <a href="http://localhost/contact"\n
+                    class="block px-3 py-2 text-base font-medium text-dark hover:text-primary hover:bg-gray-50 rounded-md">Contact</a>\n
+                <div class="border-t border-gray-200 mt-4 pt-4">\n
+                    <a href="http://localhost/login"\n
+                        class="block w-full text-center px-4 py-2 border border-primary text-primary rounded-md font-medium mb-2">Login</a>\n
+                    <a href="http://localhost/register" class="block w-full text-center btn-primary">Get Started</a>\n
+                </div>\n
+            </div>\n
+        </div>\n
+    </header>\n
+\n
+    <main>\n
+            <!-- Hero Section -->\n
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">\n
+        <!-- Background Image/Video Placeholder -->\n
+        <div class="absolute inset-0 z-0">\n
+            <img src="http://localhost/images/hero.png" alt="Luxury Real Estate" class="w-full h-full object-cover">\n
+            <div class="absolute inset-0 bg-black/50"></div>\n
+        </div>\n
+\n
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">\n
+            <h1 class="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up">\n
+                Experience Luxury <br> <span class="text-secondary">Without Limits</span>\n
+            </h1>\n
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto animate-fade-in-up"\n
+                style="animation-delay: 0.2s;">\n
+                Secure your future with ROLAD Properties. From premium land to finished homes, we help you build wealth\n
+                through real estate.\n
+            </p>\n
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">\n
+                <a href="http://localhost/properties" class="btn-primary">View Properties</a>\n
+                <a href="http://localhost/properties"\n
+                    class="px-6 py-3 rounded-lg border-2 border-white hover:bg-white hover:text-primary transition-colors duration-300 font-semibold">Book\n
+                    Inspection</a>\n
+            </div>\n
+        </div>\n
+    </section>\n
+\n
+    <!-- Trust/Stats Section -->\n
+    <section class="py-12 bg-white -mt-10 relative z-20 max-w-6xl mx-auto shadow-xl rounded-xl">\n
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100">\n
+            <div>\n
+                <div class="text-4xl font-bold text-primary mb-2">5+</div>\n
+                <div class="text-sm text-gray-500 uppercase tracking-wide">Years Experience</div>\n
+            </div>\n
+            <div>\n
+                <div class="text-4xl font-bold text-primary mb-2">100+</div>\n
+                <div class="text-sm text-gray-500 uppercase tracking-wide">Projects Delivered</div>\n
+            </div>\n
+            <div>\n
+                <div class="text-4xl font-bold text-primary mb-2">500+</div>\n
+                <div class="text-sm text-gray-500 uppercase tracking-wide">Happy Clients</div>\n
+            </div>\n
+            <div>\n
+                <div class="text-4xl font-bold text-primary mb-2">1000+</div>\n
+                <div class="text-sm text-gray-500 uppercase tracking-wide">Acres Sold</div>\n
+            </div>\n
+        </div>\n
+    </section>\n
+\n
+    <!-- Featured Properties Preview -->\n
+    <section class="py-20 bg-accent">\n
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">\n
+            <div class="text-center mb-16">\n
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">Featured Properties</h2>\n
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our hand-picked selection of premium properties available\n
+                    for immediate purchase.</p>\n
+            </div>\n
+\n
+            <!-- Property Grid -->\n
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">\n
+                <!-- DEBUG OUTSIDE LOOP -->\n
+                                    <!-- PROPERTY DEBUG: The OAK Farms -->\n
+                    <div\n
+                        class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">\n
+                        <div class="relative h-64 overflow-hidden">\n
+                                                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="The OAK Farms"\n
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">\n
+\n
+                                                            <div\n
+                                    class="absolute top-4 right-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full">\n
+                                    SELLING FAST</div>\n
+                                                    </div>\n
+                        <div class="p-6">\n
+                            <h3 class="font-heading text-xl font-bold text-primary mb-2">The OAK Farms</h3>\n
+                            <p class="text-gray-500 text-sm mb-4">Lagos-Ibadan Expressway</p>\n
+                            <div class="flex justify-between items-center border-t border-gray-100 pt-4">\n
+                                <span\n
+                                    class="text-primary font-bold text-lg">₦5.0M\n
+                                    <span\n
+                                        class="text-sm font-normal text-gray-500">/ plot</span></span>\n
+                                <a href="http://localhost/properties/the-oak-farms"\n
+                                    class="text-sm text-secondary font-semibold hover:underline">View Details</a>\n
+                            </div>\n
+                        </div>\n
+                    </div>\n
+                                    <!-- PROPERTY DEBUG: Rolad Heights -->\n
+                    <div\n
+                        class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">\n
+                        <div class="relative h-64 overflow-hidden">\n
+                                                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Rolad Heights"\n
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">\n
+\n
+                                                            <div\n
+                                    class="absolute top-4 right-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full">\n
+                                    SELLING FAST</div>\n
+                                                    </div>\n
+                        <div class="p-6">\n
+                            <h3 class="font-heading text-xl font-bold text-primary mb-2">Rolad Heights</h3>\n
+                            <p class="text-gray-500 text-sm mb-4">Ibeju-Lekki, Lagos</p>\n
+                            <div class="flex justify-between items-center border-t border-gray-100 pt-4">\n
+                                <span\n
+                                    class="text-primary font-bold text-lg">₦12.0M\n
+                                    <span\n
+                                        class="text-sm font-normal text-gray-500">/ plot</span></span>\n
+                                <a href="http://localhost/properties/rolad-heights"\n
+                                    class="text-sm text-secondary font-semibold hover:underline">View Details</a>\n
+                            </div>\n
+                        </div>\n
+                    </div>\n
+                                    <!-- PROPERTY DEBUG: Bloom Haven -->\n
+                    <div\n
+                        class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">\n
+                        <div class="relative h-64 overflow-hidden">\n
+                                                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bloom Haven"\n
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">\n
+\n
+                                                            <div\n
+                                    class="absolute top-4 right-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full">\n
+                                    SELLING FAST</div>\n
+                                                    </div>\n
+                        <div class="p-6">\n
+                            <h3 class="font-heading text-xl font-bold text-primary mb-2">Bloom Haven</h3>\n
+                            <p class="text-gray-500 text-sm mb-4">Mowe, Ogun State</p>\n
+                            <div class="flex justify-between items-center border-t border-gray-100 pt-4">\n
+                                <span\n
+                                    class="text-primary font-bold text-lg">₦2.5M\n
+                                    <span\n
+                                        class="text-sm font-normal text-gray-500">/ plot</span></span>\n
+                                <a href="http://localhost/properties/bloom-haven"\n
+                                    class="text-sm text-secondary font-semibold hover:underline">View Details</a>\n
+                            </div>\n
+                        </div>\n
+                    </div>\n
+                            </div>\n
+\n
+            <div class="text-center mt-12">\n
+                <a href="http://localhost/properties" class="btn-primary">View All Properties</a>\n
+            </div>\n
+        </div>\n
+    </section>\n
+\n
+    <!-- Call to Action -->\n
+    <section class="py-20 bg-primary relative overflow-hidden">\n
+        <div class="absolute inset-0 opacity-10 pattern-dots"></div>\n
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">\n
+            <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-6">Ready to Invest in Your Future?</h2>\n
+            <p class="text-gray-200 text-lg mb-8">Join over 100+ homeowners who have secured their wealth with ROLAD\n
+                Properties. Book a free inspection today.</p>\n
+            <div class="flex flex-col sm:flex-row justify-center gap-4">\n
+                <a href="http://localhost/properties"\n
+                    class="px-8 py-4 bg-secondary text-white rounded-lg font-bold hover:bg-secondary-light transition duration-300">Book\n
+                    an Inspection</a>\n
+                <a href="#" x-data\n
+                    @click.prevent="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'}); setTimeout(() => { document.querySelector('[x-data]').__x.$data.open = true }, 500)"\n
+                    class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-primary transition duration-300">Chat\n
+                    with Agent</a>\n
+            </div>\n
+        </div>\n
+    </section>\n
+    </main>\n
+\n
+    <footer class="bg-primary text-white pt-16 pb-8">\n
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">\n
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">\n
+                <div class="col-span-1 md:col-span-1">\n
+                    <a href="http://localhost" class="font-heading text-2xl font-bold text-white mb-4 block">\n
+                        ROLAD<span class="text-secondary">Properties</span>\n
+                    </a>\n
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">\n
+                        Building credibility and reliability through strategic showcases of delivered projects and\n
+                        high-impact programs.\n
+                    </p>\n
+                    <div class="flex space-x-4">\n
+                        <!-- Social Icons Placeholder -->\n
+                        <a href="#" class="text-gray-300 hover:text-secondary"><span\n
+                                class="sr-only">Facebook</span>FB</a>\n
+                        <a href="#" class="text-gray-300 hover:text-secondary"><span\n
+                                class="sr-only">Instagram</span>IG</a>\n
+                        <a href="#" class="text-gray-300 hover:text-secondary"><span\n
+                                class="sr-only">Twitter</span>TW</a>\n
+                    </div>\n
+                </div>\n
+\n
+                <div>\n
+                    <h3 class="font-heading text-lg font-semibold mb-4 text-secondary">Quick Links</h3>\n
+                    <ul class="space-y-2 text-sm text-gray-300">\n
+                        <li><a href="http://localhost/about" class="hover:text-white transition">About Us</a></li>\n
+                        <li><a href="http://localhost/properties" class="hover:text-white transition">Our\n
+                                Properties</a></li>\n
+                        <li><a href="http://localhost/register" class="hover:text-white transition">Become an\n
+                                Affiliate</a></li>\n
+                        <li><a href="http://localhost/blog" class="hover:text-white transition">Blog & News</a></li>\n
+                    </ul>\n
+                </div>\n
+\n
+                <div>\n
+                    <h3 class="font-heading text-lg font-semibold mb-4 text-secondary">Legal</h3>\n
+                    <ul class="space-y-2 text-sm text-gray-300">\n
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>\n
+                        <li><a href="#" class="hover:text-white transition">Terms & Conditions</a></li>\n
+                        <li><a href="#" class="hover:text-white transition">Disclaimer</a></li>\n
+                    </ul>\n
+                </div>\n
+\n
+                <div>\n
+                    <h3 class="font-heading text-lg font-semibold mb-4 text-secondary">Contact</h3>\n
+                    <ul class="space-y-2 text-sm text-gray-300">\n
+                        <li>123 Real Estate Avenue, Lagos, Nigeria</li>\n
+                        <li><a href="mailto:info@roladproperties.com"\n
+                                class="hover:text-white">info@roladproperties.com</a></li>\n
+                        <li><a href="tel:+2348000000000" class="hover:text-white">+234 800 000 0000</a></li>\n
+                    </ul>\n
+                </div>\n
+            </div>\n
+            <div class="border-t border-white/20 pt-8 text-center text-sm text-gray-400">\n
+                &copy; 2026 ROLAD Properties. All rights reserved.\n
+            </div>\n
+        </div>\n
+    </footer>\n
+\n
+    <div x-data="{ \n
+    open: false, \n
+    messages: [\n
+        { text: 'Hello! Welcome to ROLAD Properties. I am your AI Assistant. How can I help you today?', isBot: true }\n
+    ],\n
+    newMessage: '',\n
+    sendMessage() {\n
+        if (this.newMessage.trim() === '') return;\n
+        \n
+        // User Message\n
+        this.messages.push({ text: this.newMessage, isBot: false });\n
+        const userMsg = this.newMessage.toLowerCase();\n
+        this.newMessage = '';\n
+\n
+        // Simulate Bot Response\n
+        setTimeout(() => {\n
+            let botResponse = 'I can help with that. Would you like to speak with a live agent on WhatsApp?';\n
+            \n
+            if (userMsg.includes('price') || userMsg.includes('cost')) {\n
+                botResponse = 'Our properties start from ₦2.5M. We have flexible payment plans available.';\n
+            } else if (userMsg.includes('location') || userMsg.includes('where')) {\n
+                botResponse = 'We have properties in Lagos, Ogun, and Ibadan. Which location are you interested in?';\n
+            } else if (userMsg.includes('inspection') || userMsg.includes('visit')) {\n
+                botResponse = 'You can book an inspection directly on our property pages. Would you like me to send you the link?';\n
+            }\n
+\n
+            this.messages.push({ text: botResponse, isBot: true });\n
+            \n
+            // Auto-scroll\n
+            this.$nextTick(() => {\n
+                const container = this.$refs.chatContainer;\n
+                container.scrollTop = container.scrollHeight;\n
+            });\n
+        }, 800);\n
+    }\n
+}" class="fixed bottom-6 right-6 z-50">\n
+\n
+    <!-- Toggle Button -->\n
+    <button @click="open = !open"\n
+        class="bg-primary text-white p-4 rounded-full shadow-lg hover:bg-primary-light transition duration-300 flex items-center justify-center">\n
+        <svg x-show="!open" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"\n
+                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">\n
+            </path>\n
+        </svg>\n
+        <svg x-show="open" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>\n
+        </svg>\n
+    </button>\n
+\n
+    <!-- Chat Window -->\n
+    <div x-show="open" x-transition:enter="transition ease-out duration-300"\n
+        x-transition:enter-start="opacity-0 translate-y-4 scale-95"\n
+        x-transition:enter-end="opacity-100 translate-y-0 scale-100"\n
+        x-transition:leave="transition ease-in duration-200"\n
+        x-transition:leave-start="opacity-100 translate-y-0 scale-100"\n
+        x-transition:leave-end="opacity-0 translate-y-4 scale-95"\n
+        class="absolute bottom-20 right-0 w-80 md:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col max-h-[500px]">\n
+\n
+        <!-- Header -->\n
+        <div class="bg-primary p-4 flex items-center justify-between">\n
+            <div class="flex items-center">\n
+                <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white mr-3">\n
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"\n
+                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">\n
+                        </path>\n
+                    </svg>\n
+                </div>\n
+                <div>\n
+                    <h3 class="font-bold text-white text-sm">ROLAD AI Support</h3>\n
+                    <p class="text-xs text-gray-200 flex items-center"><span\n
+                            class="w-1.5 h-1.5 bg-green-400 rounded-full mr-1"></span> Online</p>\n
+                </div>\n
+            </div>\n
+            <button @click="open = false" class="text-white/80 hover:text-white"><svg class="w-5 h-5" fill="none"\n
+                    stroke="currentColor" viewBox="0 0 24 24">\n
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>\n
+                </svg></button>\n
+        </div>\n
+\n
+        <!-- Messages -->\n
+        <div x-ref="chatContainer" class="flex-1 p-4 overflow-y-auto bg-gray-50 space-y-4 min-h-[300px]">\n
+            <template x-for="(msg, index) in messages" :key="index">\n
+                <div :class="msg.isBot ? 'flex justify-start' : 'flex justify-end'">\n
+                    <div :class="msg.isBot ? 'bg-white text-gray-800 rounded-tl-none border-gray-100' : 'bg-primary text-white rounded-tr-none'"\n
+                        class="px-4 py-3 rounded-2xl shadow-sm text-sm max-w-[80%] border">\n
+                        <p x-text="msg.text"></p>\n
+                    </div>\n
+                </div>\n
+            </template>\n
+        </div>\n
+\n
+        <!-- Input -->\n
+        <div class="p-3 bg-white border-t border-gray-100">\n
+            <div class="flex items-center bg-gray-100 rounded-full px-4 py-2">\n
+                <input x-model="newMessage" @keydown.enter="sendMessage()" type="text" placeholder="Type a message..."\n
+                    class="bg-transparent flex-1 outline-none text-sm text-gray-700">\n
+                <button @click="sendMessage()" class="ml-2 text-primary hover:text-primary-light">\n
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">\n
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"\n
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>\n
+                    </svg>\n
+                </button>\n
+            </div>\n
+            <div class="mt-2 text-center">\n
+                <a href="https://wa.me/2348000000000" target="_blank"\n
+                    class="text-xs text-green-600 font-bold hover:underline flex items-center justify-center">\n
+                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">\n
+                        <path\n
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181 0.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />\n
+                    </svg>\n
+                    Chat on WhatsApp\n
+                </a>\n
+            </div>\n
+        </div>\n
+    </div>\n
+</div></body>\n
+\n
+</html>
+""" // vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:1839
+
+   FAIL  Tests\Feature\HomePageTest
+  ⨯ homepage loads and displays featured properties                      3.07s  
+  ────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Feature\HomePageTest > homepage loads and displays featured…   
+  Expected: <!DOCTYPE html>\n
+  <html lang="en">\n
+  \n
+  ... (454 more lines)
+
+  To contain: Featured Property 1
+
+  at tests/Feature/HomePageTest.php:33
+     29▕ 
+     30▕         $response->assertStatus(200);
+     31▕ 
+     32▕         foreach ($properties as $property) {
+  ➜  33▕             $response->assertSee($property->title);
+     34▕         }
+     35▕ 
+     36▕         $response->assertDontSee($nonFeatured->title);
+     37▕     }
+
+
+  Tests:    1 failed (2 assertions)
+  Duration: 3.31s
+

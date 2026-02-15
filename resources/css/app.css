@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    /* Brand Colors */
+    --color-primary: #1A4D2E; /* Deep Forest Green */
+    --color-primary-light: #2A6E45;
+    --color-secondary: #D4AF37; /* Gold/Brass */
+    --color-secondary-light: #F4CF57;
+    --color-accent: #FAF9F6; /* Off-white/Cream */
+    --color-dark: #121212;
+
+    /* Fonts */
+    --font-heading: 'Playfair Display', serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+
+    /* Animations */
+    --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Utilities */
+.text-gold {
+    color: var(--color-secondary);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.btn-primary {
+    @apply bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-primary-light)] transition-colors duration-300 font-semibold;
+}
+
+.btn-secondary {
+    @apply bg-[var(--color-secondary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-secondary-light)] transition-colors duration-300 font-semibold;
+}
