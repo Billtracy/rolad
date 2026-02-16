@@ -19,7 +19,7 @@
                 <span class="text-sm font-medium tracking-widest uppercase">Respect &bull; Integrity &bull; Speed</span>
             </div>
             <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up leading-tight">
-                Stay Ahead of Inflation with <br> <span class="text-primary">Rolad Provest:</span> <br
+                Stay Ahead of Inflation with <br> <span class="text-white">Rolad Provest:</span> <br
                     class="hidden md:block">
             </h1>
             <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto animate-fade-in-up"
