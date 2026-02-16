@@ -55,6 +55,14 @@
                     class="group flex items-center px-2 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900 {{ request()->routeIs('admin.blogs.*') ? 'bg-gray-100 text-gray-900' : '' }}">
                     Blog
                 </a>
+                <a href="{{ route('admin.testimonials.index') }}"
+                    class="group flex items-center px-2 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900 {{ request()->routeIs('admin.testimonials.*') ? 'bg-gray-100 text-gray-900' : '' }}">
+                    Testimonials
+                </a>
+                <a href="{{ route('admin.faqs.index') }}"
+                    class="group flex items-center px-2 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900 {{ request()->routeIs('admin.faqs.*') ? 'bg-gray-100 text-gray-900' : '' }}">
+                    FAQs
+                </a>
 
                 <a href="{{ route('admin.leads.index') }}"
                     class="group flex items-center px-2 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900 {{ request()->routeIs('admin.leads.*') ? 'bg-gray-100 text-gray-900' : '' }}">

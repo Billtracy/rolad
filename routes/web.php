@@ -10,6 +10,8 @@ Route::get('/contact', [App\Http\Controllers\PageController::class, 'contact'])-
 Route::get('/privacy-policy', [App\Http\Controllers\PageController::class, 'privacy'])->name('privacy');
 Route::get('/terms-and-conditions', [App\Http\Controllers\PageController::class, 'terms'])->name('terms');
 Route::get('/disclaimer', [App\Http\Controllers\PageController::class, 'disclaimer'])->name('disclaimer');
+Route::get('/testimonials', [App\Http\Controllers\PageController::class, 'testimonials'])->name('testimonials');
+Route::get('/faqs', [App\Http\Controllers\PageController::class, 'faqs'])->name('faqs');
 
 Route::get('/properties', [App\Http\Controllers\PropertyController::class, 'index'])->name('properties.index');
 Route::get('/properties/{slug}', [App\Http\Controllers\PropertyController::class, 'show'])->name('properties.show');
@@ -73,6 +75,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
             'index' => 'installments.index',
             'show' => 'installments.show',
         ]);
+
+        Route::resource('testimonials', App\Http\Controllers\Admin\TestimonialController::class)->except(['show']);
+        Route::resource('faqs', App\Http\Controllers\Admin\FaqController::class)->except(['show']);
 
         Route::get('/settings', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('settings.index');
         Route::post('/settings', [App\Http\Controllers\Admin\SettingController::class, 'update'])->name('settings.update');
